@@ -1,0 +1,25 @@
+<!-- page1.component.html -->
+
+<div class="login-container">
+    <div class="login-box">
+      <h2 class="login-header">LOGIN</h2>
+      <p class="login-subheader">Please enter your mobile number to login</p>
+      <div class="input-group">
+        <label for="mobileNumber" class="input-label">Mobile Number</label>
+        <input
+          type="text"
+          id="mobileNumber"
+          [(ngModel)]="mobileNumber"
+          placeholder="Enter mobile number"
+          class="input-field"
+        />
+      </div>
+      <div class="button-container">
+        <button (click)="sendOtp()" class="submit-button">Send OTP</button>
+      </div>
+      <div class="error-container">
+        <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+      </div>
+    </div>
+  </div>
+  

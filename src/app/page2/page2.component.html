@@ -1,0 +1,22 @@
+<!--  page2.component.html -->
+<div class="verify-container">
+    <div class="verify-box">
+      <h2 class="verify-header">VERIFICATION</h2>
+      <p class="verify-subheader">Please enter OTP to login</p>
+      <div class="input-group">
+        <label for="mobileNumber" class="input-label">Mobile Number</label>
+        <input type="text" [value]="mobileNumber" disabled class="input-field"/>
+      </div>
+      <div class="input-group">
+        <label for="otp" class="input-label">OTP</label>
+      <input type="text" [(ngModel)]="otp" placeholder="Enter OTP" class="input-field" />
+    </div>
+    <div class="button-container">
+      <button (click)="verifyOtp()" class="submit-button">Verify OTP</button>
+    </div>
+    <div class="error-container">
+      <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+    </div>
+    </div>
+  </div>
+  
